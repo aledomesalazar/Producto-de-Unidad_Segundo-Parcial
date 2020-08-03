@@ -134,7 +134,11 @@ De la tabla de verdad se obtiene que cuando la entrada de selección (S) es igua
 
 **5. DIAGRAMAS**
 
+El funcionamiento escencial del circuito se resume en el siguiente diagrama de bloques.
+
 **6. LISTA DE COMPONENTES**
+
+Toda la simulación e implementación se lo realizó en Thinkercad. Sin embargo, para llegar a un diseño ideal, se necesitó las siguientes herramientas.
 
 **7. MAPA DE VARIABLES**
 
@@ -155,3 +159,12 @@ De la tabla de verdad se obtiene que cuando la entrada de selección (S) es igua
 4. Se recomienda investigar distintos métodos de conversión entre los sistemas binario al sistema BCD esto con la finalidad de ahorrar recursos en el momento de la implementación de la calculadora pequeña.
 
 **12. CRONOGRAMA**
+
+**13. BIBLIOGRAFÍA**
+- Tocci, R., Widmer, N. and Moss, G., 2007. Sistemas Digitales. 10th ed. México: Pearson Educación, pp.317 - 331.
+- Anirudh Kumar Maurya, K., Rama Lakshmanna, Y., Bala Sindhuri, K., & Udaya Kumar, N. (2017). Design and implementation of 32-bit adders using various full adders. 2017 Innovations in Power and Advanced Computing Technologies, i-PACT 2017, 2017–January, 1–6. https://doi.org/10.1109/IPACT.2017.8245176
+- Chowdhury, A. K., Tan, D. Y. W., Yew, S. L. B., Wyai, G. L. C., Madon, B., & Thangarajah, A. (2015). Design of full adder/subtractor using irreversible IG-A gate. I4CT 2015 - 2015 2nd International Conference on Computer, Communications, and Control Technology, Art Proceeding, 103–107. https://doi.org/10.1109/I4CT.2015.7219546
+- Cosío, P. (n.d.). (No Title).
+- Electrónica Digital UCN: Restador. (n.d.). Retrieved July 31, 2020, from http://electroucn.blogspot.com/2014/06/Restador.html
+- Kumar, P. K., Rao, P. P., & Kakarla, H. K. (2017). Optimal design of reversible parity preserving new Full adder / Full subtractor. Proceedings of 2017 11th International - - Conference on Intelligent Systems and Control, ISCO 2017, 368–373. https://doi.org/10.1109/ISCO.2017.7856019
+- Restador completo – Cursos gratis. (n.d.). Retrieved July 31, 2020, from https://www.conocimientosweb.net/dcmt/ficha7419.html
