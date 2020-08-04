@@ -274,7 +274,7 @@ Como se lo realizó de forma virtual, solo se requieriría de una computadora co
 4. Se recomienda investigar distintos métodos de conversión entre los sistemas binario al sistema BCD esto con la finalidad de ahorrar recursos en el momento de la implementación de la calculadora pequeña.
 
 **12. CRONOGRAMA**
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad_Segundo-Parcial/blob/master/img/WhatsApp%20Image%202020-08-04%20at%2014.03.11.jpeg)
 
 **13. BIBLIOGRAFÍA**
 - Tocci, R., Widmer, N. and Moss, G., 2007. Sistemas Digitales. 10th ed. México: Pearson Educación, pp.317 - 331.
