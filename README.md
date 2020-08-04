@@ -136,15 +136,127 @@ De la tabla de verdad se obtiene que cuando la entrada de selección (S) es igua
 
 El funcionamiento escencial del circuito se resume en el siguiente diagrama de bloques.
 
+![]()
+
+**Figura 14. Diagrama de bloques del funcionamiento de la calculadora**
+
 **6. LISTA DE COMPONENTES**
 
 Toda la simulación e implementación se lo realizó en Thinkercad. Sin embargo, para llegar a un diseño ideal, se necesitó las siguientes herramientas.
+- Constructor Virtual de Circuitos
+- Multisim
+- Proteus
+
+Y dentro de ello, se implemento los siguientes componentes:
+- 8 Regletas básicas de Protoboard
+- Fuente de alimentación
+- Cables
+- 3 Conjuntos de 8 interruptores
+- 2 Conjuntos de 8 LEDs
+- Conjunto de 4 displays de siete segmentos
+- 6 Sumadores 74LS83
+- 2 Decodificadores BCD a siete segmentos 74LS57
+- 4 Puertas básicas NOT 74LS04
+- 2 Puertas básicas XOR 74LS86
+- 2 Puertas básicas AND 74LS08
+- 1 Puerta básica OR 74LS32
 
 **7. MAPA DE VARIABLES**
 
+Las variables están constituidas como:
+
+Variables de entrada:
+- Número A de 8 bits
+- Número B de 8 bits
+- Nivel de selección
+
+Variables Locales:
+
+Se sigue de acuerdo a cada proceso
+1. Sumador
+- Entradas: números A y B de 8 bits
+- Intermedio: acarreo inicial = 0.
+- Salidas: resultado de la suma y acarreo.
+
+2. Restador
+- Entradas: números A y B de 8 bits
+- Intermedio: acarreo inicial = 1.
+- Salidas: resultado de la resta y signo.
+
+3. Multiplexación
+- Entradas: bit del resultado de la suma, bit del resultado de la resta, siendo que ambos tengan el mismo valor posicional; y bit de selección
+- Salidas: bit seleccionado.
+
+4. Decodificación
+- Entradas: número binario multiplexado
+- Salidas: representación el LEDs
+
+Variables de Salida:
+- Número Resultado de 8 bits (o 9 si existiera acarreo).
+- Signo del resultado
+
 **8. EXPLICACIÓN DEL CÓDIGO FUENTE**
 
+En nuestra conveniencia, el procedimiento iniclamente se dividió en dos partes en la cuál sus salidas serán seleccionadas y ese resultado será mostrado. detallamos cada uno de los siguientes procesos:
+
+**8.1. Sumador**
+
+Para la implementación del circuito integrado 74LS283, este solo nos permite el ingreso de un número binario de cuatro bits. Entonces, como en la suma ordinaria siempre se comienza sumando desde las cifras menos significativas hasta las cifras más significativas, entonces la primera suma consistirá en operar con los cuatro bits menos significativos sin acarreo inicial debido a que no menciona tal condición. Este resultado producirá un número en la cuál debe ser los cuatro bits menos significativos del resultado. Sin embargo, esta suma puede que produzca un acarreo y no sería lógico que ese acarreo sea como un bits más por lo que ese acarreo de salida del primer smador vendrá a ser el acarreo de entrada del segundo sumador. Así que para el segundo sumador, las entradas serán los 4 siguientes bits más significativos de ambos números con el acarreo y resultado de ello producirá un número binario, donde sus cuatro bits serán los más significativos. El acarreo de salida que produciría representa el bit más 2. 
+
+![]()
+
+**Figura 15. Esquema eléctrico del sumador**
+
+**8.2. Restador**
+
+Sigue la misma lógica del circuito sumador, es decir, operar dígito por dígito de drecha a izquierda. En este caso, el segundo número deberá estár complementado para producir esa diferencia, pero hay que tomar en cuenta que el resultado de la resta produciría números positivos como negativos debido a que se resta un número mayor con un número menor o un número menor con un número mayor. La forma más utilizada de realizar la resta es utilizando el complemento a 2. Este consiste en trasnformar al número sustraendo a complemento a 1, es decir, cambiar los 0s por 1s y los 1s por 0s, y a partir de ello sumar 1 a ese resultado. Entonces, en la resta de los bits menos significativos, las entradas del segundo número irán con inversores ya que representa la complementación de ese número y el acarreo inicial irá con nivel alto ya que se esta sumando a 1 considerando la condición del complemento a 2. Los acarreos intermedios se conectarán de la misma forma de la suma. 
+
+![]()
+
+**Figura 16. Esquema eléctrico del la primera parte del restador**
+
+El resultado por medio de ambos sumadores es el resultado final si se resta un número menor con un número mayor, pero no será lo mismo si llegara a ser un número negativo. Algo interesante es que cuando se resta un número mayor con un número menor, el resultado del acarreo es 1, mientras que si se realiza por el contrario, el acarreo es 0. En pocas palabras, si el acarreo es 1 el número resultado se mantendrá, sino, el número debera transformarse a complemento a 2. Para ambos casos, se aplica el siguiente procedimiento:
+1. Se invierte el acarreo
+2. Cada bit de número resultado llega a ser una entrada de la compuerta XOR.
+3. La segunda entrada de todas las compuertas es el bit de acarreo invertido.
+4. Las salidas de las compuertas XOR irán conectadas a cada entrada de otros dos sumadores desde los menos significativos.
+5. El acarreo inicial del sumador menos significativo es el bit del signo invertido.
+6. El resultado de la suma es el resultado válido tanto para un número positivos como un número negativo.
+7. El signo de la resta representa el acarreo de salida invertido de la operación de los dos primeros sumadores.
+
+![]()
+
+**Figura 17. Esquema eléctrico todo el restador**
+
+**8.3 Multiplexación**
+
+La forma más sencilla de multiplexar las salidas es utilizando un multiplexor tipo 2 a 1 debido a que se están realizando dos operaciones y se quiere visualizar una. Entonces, se requiere de 8 multiplexores, uno por cada dígito en la cuál el selector de datos común tendrá dos estados: 0 para la suma y 1 para la resta. El resultado de esa multiplexación son los dígitos de cada operación.
+
+![]()
+
+**Figura 17. Esquema eléctrico de la multiplexación de salidas**
+
+**8.4. Decodificación**
+Se representará en LEDs los digitos manejando el nivel de lógica positiva.
+
+**8.5. Resultados**
+Los resultados se muestran tanto la simulación en proteus, en Tinkercad como en el constructor virtual de circuitos.
+
+![]()
+
+**Figura 18. Implementación realizada en Proteus**
+
+![]()
+
+**Figura 19. Implemetación realizada en Tinkercad**
+
+![]()
+
+**Figura 20. Implementación realizada en el Constructor Virtual de Circuitos**
+
 **9. DESCRIPCIÓN DE PRERREQUISITOS Y CONFIGURACIÓN**
+
+Como se lo realizó de forma virtual, solo se requieriría de una computadora con conexión a internet. Es recomendable tener una memoria RAM de 3GB para adelante para el adecuada simulación en el Tinkercad.
 
 **10. CONCLUSIONES**
 1. El diseño de una calculadora capaz de realizar la suma y la resta entre dos números binarios de ocho bits cada uno, terminó siendo un diseño bastante complejo. Desde considerar la complementación del segundo números para realizar la resta hasta realizar la multiplexión del resultado para, posteriormente, ser mostrado en los display de siete segmentos; el proyecto terminó por evaluar todos los conocimientos adquiridos en clases para ser llevado a cabo con éxito.
