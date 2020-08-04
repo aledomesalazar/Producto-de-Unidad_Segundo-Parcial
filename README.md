@@ -41,29 +41,29 @@ Los investigadores Adib Kabir Chowdhury, Daniel Yong Wen Tan, Simon Lau Boung Ye
 
 Los circuitos sumadores son circuitos muy utilizados en distintos tipos de sistemas digitales. Para comprender efectivamente el funcionamiento de un circuito sumador, primero se debe entender el funcionamiento de un semisumador. El semisumador realiza únicamente la suma de dos números binarios con un bit cada uno. 
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad_Segundo-Parcial/blob/master/img/WhatsApp%20Image%202020-08-04%20at%2013.26.14.jpeg)
 
 **Figura 1. Diagrama de bloque de un circuito semisumador**
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad_Segundo-Parcial/blob/master/img/WhatsApp%20Image%202020-08-04%20at%2013.26.19.jpeg)
 
 **Figura 2. Tabla de verdad de circuito semisumador**
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad_Segundo-Parcial/blob/master/img/WhatsApp%20Image%202020-08-04%20at%2013.26.23.jpeg)
 
 **Figura 3. Esquema eléctrico del circuito semisumador**
 
 El circuito presentado anteriormente no es considerado de mucha utilidad, ya que siempre se suma más de un bit. Para la suma en binario siempre se utiliza un bit de acarreo, que es el resultado de la suma de las operaciones anteriores. Es por esta razón que se necesita de un circuito que incluya como parte de sus entradas el bit de acarreo de las suma anterior. A este circuito se lo denomina como sumador completo.
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad_Segundo-Parcial/blob/master/img/WhatsApp%20Image%202020-08-04%20at%2013.26.31.jpeg)
 
 **Figura 4. Diagrama de bloque de un circuito sumador completo**
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad_Segundo-Parcial/blob/master/img/WhatsApp%20Image%202020-08-04%20at%2013.26.37.jpeg)
 
 **Figura 5. Tabla de verdad de circuito sumador completo**
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad_Segundo-Parcial/blob/master/img/WhatsApp%20Image%202020-08-04%20at%2013.26.43.jpeg)
 
 **Figura 6. Esquema eléctrico del circuito sumador completo**
 
@@ -71,23 +71,23 @@ El circuito presentado anteriormente no es considerado de mucha utilidad, ya que
 
 Un semirestador es un circuito combinacional que resta dos bits y produce su respectiva diferencia. Posee dos entradas que son el minuendo (x) y el sustraendo (y). Para realizar la diferencia se debe verificar las magnitudes relativas del minuendo y del sustraendo, cuando el minuendo es menor que el sustraendo es necesario pedir prestado un 1 lógico de la siguiente etapa más alta. En la salida se generan dos bits de salida el de la diferencia (D) y el bit del préstamo (B). El semirestador cuenta con la siguiente tabla de verdad.
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad_Segundo-Parcial/blob/master/img/WhatsApp%20Image%202020-08-04%20at%2013.26.52.jpeg)
 
-**Figura 7. Esquema eléctrico del circuito resrador**
+**Figura 7. Esquema eléctrico del circuito restador**
 
 De la tabla de verdad se obtiene que la diferencia puede ser representada por medio de una compuerta XOR y el préstamo puede ser representado por la expresión X’Y.  Dando el siguiente esquema como resultado.
 
 Un restador completo es un circuito combinacional que realiza la resta entre dos bits tomando en consideración que un 1 lógico ha sido tomado prestado por la etapa significativa más baja. El circuito posee tres entradas que son el minuendo (x), el sustraendo (y) y el préstamo de entrada (z) y posee dos salidas que son la diferencia (D) y el préstamo de salida (B). Un restador completo posee la siguiente tabla de verdad.
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad_Segundo-Parcial/blob/master/img/WhatsApp%20Image%202020-08-04%20at%2013.26.47.jpeg)
 
 **Figura 8. Diagrama de bloque de un circuito restador completo**
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad_Segundo-Parcial/blob/master/img/WhatsApp%20Image%202020-08-04%20at%2013.26.58.jpeg)
 
 **Figura 9. Tabla de verdad de circuito restador completo**
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad_Segundo-Parcial/blob/master/img/WhatsApp%20Image%202020-08-04%20at%2013.27.03.jpeg)
 
 **Figura 10. Esquema eléctrico del circuito restador completo**
 
@@ -113,20 +113,21 @@ SUMA y RESTA.
 5. Los niveles B0’ a B3’ pasan a través de las compuertas OR en el sumador en paralelo de cuatro bits, para que se sumen a los bits A0  A3.
 6. La diferencia aparece en las salidas S0 a S3.
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad_Segundo-Parcial/blob/master/img/WhatsApp%20Image%202020-08-04%20at%2013.27.07.jpeg)
 
 **Figura 11. Circuito sumador - restador**
 
 Un circuito multiplexor es un circuito digital que selecciona una de las múltiples entradas que posee y su valor lógico es enviada por la única salida que posee el circuito. Esta selección de datos es realizada mediante una o varias entradas de selección. La codificación binaria que resulta de las entradas S indica el índice de la entrada I que es conducida a la salida. 
 El siguiente esquema es la representación de un circuito multiplexor de dos entradas.
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad_Segundo-Parcial/blob/master/img/WhatsApp%20Image%202020-08-04%20at%2013.27.11.jpeg)
 
 **Figura 12. Esquema básico del funcionamiento de un multiplexor de 2 entradas.**
 
 De la tabla de verdad se obtiene que cuando la entrada de selección (S) es igual a cero la salida es igual a la entrada I0, en cambio, cuando la entrada de selección es igual a uno entonces la salida es igual a la entrada I1. Lo que puede hacer que la siguiente tabla de verdad reemplace a la anterior tabla de verdad.
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad_Segundo-Parcial/blob/master/img/WhatsApp%20Image%202020-08-04%20at%2013.27.16.jpeg)
+![](https://github.com/aledomesalazar/Producto-de-Unidad_Segundo-Parcial/blob/master/img/WhatsApp%20Image%202020-08-04%20at%2013.27.20.jpeg)
 
 **Figura 13. Tabla de verdad de un selector de 2 a 1**
 
@@ -203,7 +204,7 @@ En nuestra conveniencia, el procedimiento iniclamente se dividió en dos partes 
 
 Para la implementación del circuito integrado 74LS283, este solo nos permite el ingreso de un número binario de cuatro bits. Entonces, como en la suma ordinaria siempre se comienza sumando desde las cifras menos significativas hasta las cifras más significativas, entonces la primera suma consistirá en operar con los cuatro bits menos significativos sin acarreo inicial debido a que no menciona tal condición. Este resultado producirá un número en la cuál debe ser los cuatro bits menos significativos del resultado. Sin embargo, esta suma puede que produzca un acarreo y no sería lógico que ese acarreo sea como un bits más por lo que ese acarreo de salida del primer smador vendrá a ser el acarreo de entrada del segundo sumador. Así que para el segundo sumador, las entradas serán los 4 siguientes bits más significativos de ambos números con el acarreo y resultado de ello producirá un número binario, donde sus cuatro bits serán los más significativos. El acarreo de salida que produciría representa el bit más 2. 
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad_Segundo-Parcial/blob/master/img/WhatsApp%20Image%202020-08-04%20at%2013.27.23.jpeg)
 
 **Figura 15. Esquema eléctrico del sumador**
 
@@ -211,7 +212,7 @@ Para la implementación del circuito integrado 74LS283, este solo nos permite el
 
 Sigue la misma lógica del circuito sumador, es decir, operar dígito por dígito de drecha a izquierda. En este caso, el segundo número deberá estár complementado para producir esa diferencia, pero hay que tomar en cuenta que el resultado de la resta produciría números positivos como negativos debido a que se resta un número mayor con un número menor o un número menor con un número mayor. La forma más utilizada de realizar la resta es utilizando el complemento a 2. Este consiste en trasnformar al número sustraendo a complemento a 1, es decir, cambiar los 0s por 1s y los 1s por 0s, y a partir de ello sumar 1 a ese resultado. Entonces, en la resta de los bits menos significativos, las entradas del segundo número irán con inversores ya que representa la complementación de ese número y el acarreo inicial irá con nivel alto ya que se esta sumando a 1 considerando la condición del complemento a 2. Los acarreos intermedios se conectarán de la misma forma de la suma. 
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad_Segundo-Parcial/blob/master/img/WhatsApp%20Image%202020-08-04%20at%2013.27.28.jpeg)
 
 **Figura 16. Esquema eléctrico del la primera parte del restador**
 
@@ -224,7 +225,7 @@ El resultado por medio de ambos sumadores es el resultado final si se resta un n
 6. El resultado de la suma es el resultado válido tanto para un número positivos como un número negativo.
 7. El signo de la resta representa el acarreo de salida invertido de la operación de los dos primeros sumadores.
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad_Segundo-Parcial/blob/master/img/WhatsApp%20Image%202020-08-04%20at%2013.27.32.jpeg)
 
 **Figura 17. Esquema eléctrico todo el restador**
 
@@ -232,7 +233,7 @@ El resultado por medio de ambos sumadores es el resultado final si se resta un n
 
 La forma más sencilla de multiplexar las salidas es utilizando un multiplexor tipo 2 a 1 debido a que se están realizando dos operaciones y se quiere visualizar una. Entonces, se requiere de 8 multiplexores, uno por cada dígito en la cuál el selector de datos común tendrá dos estados: 0 para la suma y 1 para la resta. El resultado de esa multiplexación son los dígitos de cada operación.
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad_Segundo-Parcial/blob/master/img/WhatsApp%20Image%202020-08-04%20at%2013.27.36.jpeg)
 
 **Figura 17. Esquema eléctrico de la multiplexación de salidas**
 
@@ -242,15 +243,17 @@ Se representará en LEDs los digitos manejando el nivel de lógica positiva.
 **8.5. Resultados**
 Los resultados se muestran tanto la simulación en proteus, en Tinkercad como en el constructor virtual de circuitos.
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad_Segundo-Parcial/blob/master/img/WhatsApp%20Image%202020-08-04%20at%2013.27.41.jpeg)
 
 **Figura 18. Implementación realizada en Proteus**
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad_Segundo-Parcial/blob/master/img/WhatsApp%20Image%202020-08-04%20at%2013.27.45.jpeg)
 
 **Figura 19. Implemetación realizada en Tinkercad**
 
-![]()
+![](https://github.com/aledomesalazar/Producto-de-Unidad_Segundo-Parcial/blob/master/img/WhatsApp%20Image%202020-08-04%20at%2013.27.51.jpeg)
+
+![](https://github.com/aledomesalazar/Producto-de-Unidad_Segundo-Parcial/blob/master/img/WhatsApp%20Image%202020-08-04%20at%2013.27.57.jpeg)
 
 **Figura 20. Implementación realizada en el Constructor Virtual de Circuitos**
 
@@ -271,6 +274,7 @@ Como se lo realizó de forma virtual, solo se requieriría de una computadora co
 4. Se recomienda investigar distintos métodos de conversión entre los sistemas binario al sistema BCD esto con la finalidad de ahorrar recursos en el momento de la implementación de la calculadora pequeña.
 
 **12. CRONOGRAMA**
+![]()
 
 **13. BIBLIOGRAFÍA**
 - Tocci, R., Widmer, N. and Moss, G., 2007. Sistemas Digitales. 10th ed. México: Pearson Educación, pp.317 - 331.
