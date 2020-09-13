@@ -283,4 +283,4 @@ Como se lo realizó de forma virtual, solo se requieriría de una computadora co
 - Cosío, P. (n.d.). (No Title).
 - Electrónica Digital UCN: Restador. (n.d.). Retrieved July 31, 2020, from http://electroucn.blogspot.com/2014/06/Restador.html
 - Kumar, P. K., Rao, P. P., & Kakarla, H. K. (2017). Optimal design of reversible parity preserving new Full adder / Full subtractor. Proceedings of 2017 11th International - - Conference on Intelligent Systems and Control, ISCO 2017, 368–373. https://doi.org/10.1109/ISCO.2017.7856019
-- Restador completo – Cursos gratis. (n.d.). Retrieved July 31, 2020, from https://www.conocimientosweb.net/dcmt/ficha7419.html
+- Restador completo – Cursos gratis. (n.d.). Retrieved July 31, 2020, from https://www.conocimientosweb.net/dcmt/ficha7419.html 
